@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('darkMode', isDark);
   }
 
-  // Verifica preferência salva ou do sistema
   const savedMode = localStorage.getItem('darkMode');
   if (savedMode !== null) {
     setDarkMode(savedMode === 'true');
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setDarkMode(prefersDark.matches);
   }
 
-  // Alterna o tema manualmente
   darkModeToggle.addEventListener('click', () => {
     const isDark = !document.body.classList.contains('dark-theme');
     setDarkMode(isDark);
@@ -73,6 +71,33 @@ document.addEventListener('DOMContentLoaded', function () {
     currentIndex = (currentIndex + 1) % slides.length;
     updateCarousel();
   });
+
+  // Swipe no celular
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, false);
+
+  carousel.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  }, false);
+
+  function handleSwipeGesture() {
+    const swipeThreshold = 50;
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance > 0) {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      } else {
+        currentIndex = (currentIndex + 1) % slides.length;
+      }
+      updateCarousel();
+    }
+  }
 
   // Inicializa o carrossel
   updateCarousel();
