@@ -1,0 +1,176 @@
+:root {
+  --primary-color: #0d6efd;
+  --dark-bg: #121212;
+  --dark-card: #1e1e1e;
+  --dark-nav: #1a1a1a;
+  --dark-text: #e1e1e1;
+  --light-bg: #f8f9fa;
+}
+
+/* ===== Corpo e Perfil ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 56px;
+  scroll-behavior: smooth;
+}
+
+#imagem-perfil {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+}
+
+/* ===== Seções ===== */
+section {
+  padding: 5rem 0;
+}
+
+.custom-bg-section {
+  background-color: var(--light-bg);
+}
+
+/* ===== Tecnologias ===== */
+.tech-icon {
+  max-width: 80px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* ===== Carrossel de Projetos ===== */
+.carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.project-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.project-slide {
+  min-width: 100%;
+  padding: 0 15px;
+}
+
+.card {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+/* ===== Controles do Carrossel ===== */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* ===== Indicadores ===== */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.carousel-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background: var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* ===== Dark Mode ===== */
+body.dark-theme {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.dark-theme .custom-bg-section {
+  background: var(--dark-card);
+}
+
+.dark-theme .card {
+  background: var(--dark-card);
+  color: var(--dark-text);
+}
+
+.dark-theme .card-img-top {
+  background: #2d2d2d;
+}
+
+/* ===== Redes Sociais ===== */
+.social-icon {
+  font-size: 2rem;
+  margin: 0 10px;
+  color: var(--primary-color);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #084298;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+
+  .carousel-control {
+    width: 30px;
+    height: 30px;
+  }
+}
