@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Jakaboski | Dev</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>João Carlos Jakaboski</h1>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">João Jakaboski | Dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+                <button class="btn ms-3" id="darkModeToggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-5 custom-bg-section">
+        <div class="container" data-aos="fade-up">
+            <div class="text-center"><img id="imagem-perfil" src="img/perfil.jpg" alt="João Jakaboski"></div>
+            <h2 class="text-center mb-4">Sobre Mim</h2>
+            <p class="text-center lead">
+                Sou estudante de Ciência da Computação na URI | Erechim e um entusiasta por tecnologia e sistemas em
+                geral.
+            </p>
+            <ul>
+                <li data-aos="fade-up">
+                    <p class="text-center lead">
+                        Desde sempre, fui curioso para entender como as coisas funcionam — essa curiosidade me motivou a
+                        seguir
+                        na área de tecnologia, com o objetivo de não apenas usar sistemas, mas também desenvolvê-los.
+                    </p>
+                </li>
+                <li data-aos="fade-up">
+                    <p class="text-center lead">
+                        Tenho afinidade com bancos de dados e sistemas back-end, mas busco ser um profissional completo,
+                        entendendo o funcionamento do sistema como um todo. Acredito que essa visão global é essencial
+                        para construir soluções mais eficientes e integradas..
+                    </p>
+                </li>
+                <li data-aos="fade-up">
+                    <p class="text-center lead">
+                        Valorizo a criação de sistemas robustos, bem estruturados e que proporcionem uma experiência
+                        fluida e intuitiva para o usuário final, sempre com foco na prevenção de falhas e na qualidade
+                        do produto.
+                    </p>
+                </li>
+                <li data-aos="fade-up">
+                    <p class="text-center lead">
+                        Atualmente, trabalho como Programador de Máquinas CNC, mas estou sempre aberto a conversas,
+                        conexões e oportunidades relacionadas à Ciência da Computação e ao desenvolvimento de software.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section id="tecnologias" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Tecnologias</h2>
+            <div class="row text-center justify-content-center g-4">
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/html5.png" alt="HTML5" class="img-fluid mb-2 tech-icon">
+                    <p>HTML5</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/css3.png" alt="CSS3" class="img-fluid mb-2 tech-icon">
+                    <p>CSS3</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/js.png" alt="JavaScript" class="img-fluid mb-2 tech-icon">
+                    <p>JavaScript</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/bootstrap.png" alt="Bootstrap" class="img-fluid mb-2 tech-icon">
+                    <p>Bootstrap</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/java.png" alt="Java" class="img-fluid mb-2 tech-icon">
+                    <p>Java</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/nodejs.png" alt="NodeJs" class="img-fluid mb-2 tech-icon">
+                    <p>NodeJs</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/mysql.png" alt="MySQL" class="img-fluid mb-2 tech-icon">
+                    <p>MySQL</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/postgre.png" alt="Postgre" class="img-fluid mb-2 tech-icon">
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/csharp.png" alt="CSharp" class="img-fluid mb-2 tech-icon">
+                    <p>C#</p>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/c++.png" alt="CPlusPlus" class="img-fluid mb-2 tech-icon">
+                    <p>C++</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-5 custom-bg-section">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Projetos</h2>
+            <div class="carousel-container">
+                <div class="project-carousel-wrapper">
+                    <div class="project-carousel">
+                        <div class="project-slide" data-aos="fade-up">
+                            <div class="card h-100">
+                                <img src="img/ordemFacil.png" class="card-img-top" alt="Ordem Fácil">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Ordem Fácil</h5>
+                                    <p class="card-text">Gerenciamento de Ordens de Serviço</p>
+                                    <a href="https://github.com/joaocjakaboski/Ordem_Facil" target="_blank"
+                                        class="btn btn-primary mt-auto">Ver no GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-slide" data-aos="fade-up">
+                            <div class="card h-100">
+                                <img src="img/AutoStockCar.jpg" class="card-img-top" alt="AutoStockCar">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">AutoStockCar</h5>
+                                    <p class="card-text">Gerenciamento de estoque e vendas</p>
+                                    <a href="https://github.com/joaocjakaboski/AutoStockCar-Recreate" target="_blank"
+                                        class="btn btn-primary mt-auto">Ver no GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control prev" aria-label="Anterior"><i
+                            class="bi bi-chevron-left"></i></button>
+                    <button class="carousel-control next" aria-label="Próximo"><i
+                            class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="carousel-indicators"></div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-4">Entre em Contato</h2>
+            <div class="social-links text-center mb-4">
+                <a href="https://www.linkedin.com/in/joão-carlos-jakaboski-7b837b210" target="_blank" class="social-icon"><i
+                        class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/joaocjakaboski" target="_blank" class="social-icon"><i
+                        class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/joao_carlos_j/" target="_blank" class="social-icon"><i
+                        class="bi bi-instagram"></i></a>
+            </div>
+            <form action="https://formspree.io/f/xrbqnrvy" method="POST" class="mx-auto"
+                style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <input type="text" class="form-control" id="assunto" name="assunto" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p>© <span id="current-year"></span> João Jakaboski. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
